@@ -3,14 +3,20 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import { sendToVercelAnalytics } from './vitals';
-import Home from './pages/home';
+import Layout from './components/layout';
+import "./styles/globals.scss";
+import navLinks from './data/navLinks';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-      </Routes>
+      <Layout>
+        <Routes>
+        {navLinks.map((item) => (
+          <Route path={item.link} element={item.element}></Route>
+        ))}
+        </Routes>
+      </Layout>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
