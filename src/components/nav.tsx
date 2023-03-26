@@ -1,11 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import navLinks from "../data/navLinks";
 import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
-    <div className="w-full h-[18vh] bg-teal-600 grid grid-cols-2 place-items-center">
+    <div className="w-full h-[18vh] bg-teal-600 md:grid hidden grid-cols-2 place-items-center">
       <h1 className="text-white text-4xl">Nolan Knight</h1>
       <div className="text-white grid grid-cols-4 text-lg">
         {navLinks.map((item) => (
