@@ -27,7 +27,7 @@ function MobileNav() {
       <div
         className={
           linksShown
-            ? "w-full h-[82vh] grid grid-rows-4  bg-teal-600"
+            ? "w-full h-[82vh] grid grid-rows-4 text-white bg-teal-600"
             : "hidden"
         }
       >
