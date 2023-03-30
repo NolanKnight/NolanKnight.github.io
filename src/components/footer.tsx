@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -10,16 +9,9 @@ function Footer() {
       <div className="md:ml-16 text-center md:text-left">
         <p className="text-white text-lg">
           This website was created by me. Contact me at{" "}
-          <Link
-            className="underline"
-            to="#"
-            onClick={(e) => {
-              window.location.href = "mailto:hello@nolanknight.me";
-              e.preventDefault();
-            }}
-          >
+          <a className="underline" href="mailto:hello@nolanknight.me">
             hello@nolanknight.me
-          </Link>
+          </a>
         </p>
       </div>
     </div>

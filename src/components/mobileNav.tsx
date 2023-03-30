@@ -31,20 +31,27 @@ function MobileNav() {
             : "hidden"
         }
       >
-        {navLinks.map((item) => (
-          <NavLink
-            to={item.link}
-            className={({ isActive, isPending }) =>
-              isPending
-                ? "w-full grid place-items-center bg-orange-600"
-                : isActive
-                ? "w-full grid place-items-center bg-orange-600"
-                : "w-full grid place-items-center"
-            }
-          >
-            {item.label}
-          </NavLink>
-        ))}
+        {navLinks.map((item) =>
+          item.navBar ? (
+            <NavLink
+              to={item.link}
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "w-full grid place-items-center bg-orange-600"
+                  : isActive
+                  ? "w-full grid place-items-center bg-orange-600"
+                  : "w-full grid place-items-center"
+              }
+              onClick={() => {
+                setLinksShown(false);
+              }}
+            >
+              {item.label}
+            </NavLink>
+          ) : (
+            ""
+          )
+        )}
       </div>
     </>
   );
