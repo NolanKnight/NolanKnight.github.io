@@ -1,4 +1,8 @@
 import React from "react";
+import { IconContext } from "react-icons";
+import { BsGithub } from "react-icons/bs";
+import { ImMail4 } from "react-icons/im";
+import { FaSpotify } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -6,13 +10,28 @@ function Footer() {
       <div className="w-full grid place-items-center">
         <div className="w-[95vw] h-px bg-white mb-16"></div>
       </div>
-      <div className="md:ml-16 text-center md:text-left">
-        <p className="text-white text-lg">
-          This website was created by me. Contact me at{" "}
-          <a className="underline" href="mailto:hello@nolanknight.me">
-            hello@nolanknight.me
+      <div className="md:ml-16 text-center md:text-left grid grid-rows-3">
+        <div className="grid grid-cols-3 w-[10vw]">
+          <a href="https://github.com/NolanKnight" target="_blank">
+            <IconContext.Provider value={{ color: "rgb(13 148 136)", size: "38" }}>
+              <BsGithub />
+            </IconContext.Provider>
           </a>
-        </p>
+          <a href="mailto:hello@nolanknight.me" target="_blank">
+            <IconContext.Provider value={{ color: "rgb(13 148 136)", size: "38" }}>
+              <ImMail4 />
+            </IconContext.Provider>
+          </a>
+          <a
+            href="https://open.spotify.com/user/31b4pra2i5szjjaue5embhrcw5ee?si=c29772dcb5fa4ce4"
+            target="_blank"
+          >
+            <IconContext.Provider value={{ color: "rgb(13 148 136)", size: "38" }}>
+              <FaSpotify />
+            </IconContext.Provider>
+          </a>
+        </div>
+        <p className="text-gray-400 mt-4">© 2023 Nolan Knight</p>
       </div>
     </div>
   );

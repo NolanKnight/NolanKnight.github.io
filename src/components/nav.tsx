@@ -13,17 +13,17 @@ function Nav() {
           Nolan Knight
         </h1>
       </div>
-      <div className="text-white grid grid-cols-4 text-lg w-[49vw]">
+      <div className="text-white grid grid-cols-5 text-lg w-[35vw] h-[10vh]">
         {navLinks.map((item) =>
           item.navBar ? (
             <NavLink
               to={item.link}
               className={({ isActive, isPending }) =>
                 isPending
-                  ? "h-[18vh] grid place-items-center bg-orange-600"
+                  ? "grid place-items-center bg-orange-600"
                   : isActive
-                  ? "h-[18vh] grid place-items-center bg-orange-600"
-                  : "h-[18vh] grid place-items-center"
+                  ? "grid place-items-center bg-orange-600"
+                  : "grid place-items-center"
               }
             >
               {item.label}
