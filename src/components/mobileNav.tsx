@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 import navLinks from "../data/navLinks";
 
 function MobileNav() {
+  const logo = require("../logo.png");
+
   const [linksShown, setLinksShown] = useState(false);
 
   function handleLinksButton() {
@@ -18,7 +20,8 @@ function MobileNav() {
 
   return (
     <>
-      <div className="md:hidden w-full h-[18vh] bg-teal-600 grid grid-cols-2 place-items-center">
+      <div className="md:hidden w-full h-[18vh] bg-teal-600 grid grid-cols-3 place-items-center">
+        <img src={logo} className="w-[10vw]" alt="{010}" />
         <h1 className="text-white text-2xl">Nolan Knight</h1>
         <IconContext.Provider value={{ color: "white", size: "38" }}>
           <FaBars onClick={handleLinksButton} />
