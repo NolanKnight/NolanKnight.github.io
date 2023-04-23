@@ -6,32 +6,47 @@ import { FaSpotify } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="w-full h-[40vh] bg-zinc-900 mt-[20vh]">
-      <div className="w-full grid place-items-center">
-        <div className="w-[95vw] h-px bg-white mb-16"></div>
+    <div className="mt-[20vh] h-[40vh] w-full bg-zinc-900">
+      <div className="grid w-full place-items-center">
+        <div className="mb-16 h-px w-[95vw] bg-white"></div>
       </div>
-      <div className="md:ml-16 place-items-center md:place-items-start grid grid-rows-3">
-        <div className="grid grid-cols-3 w-[60vw] place-items-center md:place-items-start md:w-[30vw] lg:w-[12vw]">
-          <a href="https://github.com/NolanKnight" target="_blank" rel="noreferrer">
-            <IconContext.Provider value={{ color: "rgb(13 148 136)", size: "38" }}>
+      <div className="grid grid-rows-3 place-items-center md:ml-16 md:place-items-start">
+        <div className="grid w-[60vw] grid-cols-3 place-items-center md:w-[30vw] md:place-items-start lg:w-[12vw]">
+          <a
+            href="https://github.com/NolanKnight"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IconContext.Provider
+              value={{ color: "rgb(13 148 136)", size: "38" }}
+            >
               <BsGithub />
             </IconContext.Provider>
           </a>
-          <a href="mailto:hello@nolanknight.me" target="_blank" rel="noreferrer">
-            <IconContext.Provider value={{ color: "rgb(13 148 136)", size: "38" }}>
+          <a
+            href="mailto:hello@nolanknight.me"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IconContext.Provider
+              value={{ color: "rgb(13 148 136)", size: "38" }}
+            >
               <ImMail4 />
             </IconContext.Provider>
           </a>
           <a
             href="https://open.spotify.com/user/31b4pra2i5szjjaue5embhrcw5ee?si=c29772dcb5fa4ce4"
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
-            <IconContext.Provider value={{ color: "rgb(13 148 136)", size: "38" }}>
+            <IconContext.Provider
+              value={{ color: "rgb(13 148 136)", size: "38" }}
+            >
               <FaSpotify />
             </IconContext.Provider>
           </a>
         </div>
-        <p className="text-gray-400 mt-4">© 2023 Nolan Knight</p>
+        <p className="mt-4 text-gray-400">© 2023 Nolan Knight</p>
       </div>
     </div>
   );

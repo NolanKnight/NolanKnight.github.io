@@ -20,9 +20,9 @@ function MobileNav() {
 
   return (
     <>
-      <div className="md:hidden w-full h-[18vh] bg-teal-600 grid grid-cols-3 place-items-center">
+      <div className="grid h-[18vh] w-full grid-cols-3 place-items-center bg-teal-600 md:hidden">
         <img src={logo} className="w-[10vw]" alt="{010}" />
-        <h1 className="text-white text-2xl">Nolan Knight</h1>
+        <h1 className="text-2xl text-white">Nolan Knight</h1>
         <IconContext.Provider value={{ color: "white", size: "38" }}>
           <FaBars onClick={handleLinksButton} />
         </IconContext.Provider>
@@ -30,7 +30,7 @@ function MobileNav() {
       <div
         className={
           linksShown
-            ? "w-full h-[82vh] grid grid-rows-4 text-white bg-teal-600"
+            ? "grid h-[82vh] w-full grid-rows-4 bg-teal-600 text-white"
             : "hidden"
         }
       >
@@ -40,10 +40,10 @@ function MobileNav() {
               to={item.link}
               className={({ isActive, isPending }) =>
                 isPending
-                  ? "w-full grid place-items-center bg-orange-600"
+                  ? "grid w-full place-items-center bg-orange-600"
                   : isActive
-                  ? "w-full grid place-items-center bg-orange-600"
-                  : "w-full grid place-items-center"
+                  ? "grid w-full place-items-center bg-orange-600"
+                  : "grid w-full place-items-center"
               }
               onClick={() => {
                 setLinksShown(false);
