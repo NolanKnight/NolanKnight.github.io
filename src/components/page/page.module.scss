@@ -6,11 +6,24 @@
   text-align: center;
 }
 
+.body p {
+  margin-top: 1rem;
+  color: #ffffff;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .heading1 {
     margin-left: 4rem /* 64px */;
     font-size: 3.75rem /* 60px */;
     line-height: 1;
+    text-align: left;
+  }
+
+  .body p {
+    margin-left: 4rem;
     text-align: left;
   }
 }
